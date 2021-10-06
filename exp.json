@@ -1,0 +1,61 @@
+{
+  "version": "1.0.0",
+  "title": "test",
+  "description": "test",
+  "configuration": {
+    "myarg": "exp.json",
+    "another_arg": "another.json"
+  },
+  "variables": {
+    "selected_instance": null
+  },
+  "tags": [
+    "network",
+    "lala"
+  ],
+  "controls": [
+    {
+      "name": "Playground control",
+      "provider": {
+        "type": "python",
+        "module": "playground.controls.playground_control"
+      }
+    },
+    {
+      "name": "Playground control",
+      "provider": {
+        "type": "python",
+        "module": "playground.controls.playground_control"
+      }
+    }
+  ],
+  "steady-state-hypothesis": {
+    "title": "Check something",
+    "probes": [
+      {
+        "name": "test probe 1",
+        "description": "playground probe 1",
+        "type": "probe",
+        "provider": {
+          "type": "python",
+          "module": "playground.play.probes",
+          "func": "some_probe"
+        },
+        "tolerance": true
+      }
+    ]
+  },
+  "method": [
+    {
+      "name": "test action 1",
+      "description": "playground action 1",
+      "type": "probe",
+      "provider": {
+        "type": "python",
+        "module": "playground.play.actions",
+        "func": "some_action"
+      }
+    }
+  ],
+  "rollbacks": []
+}

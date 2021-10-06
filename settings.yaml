@@ -1,0 +1,5 @@
+controls:
+    playground-control:
+      provider:
+        type: python
+        module: playground.controls.global_control
