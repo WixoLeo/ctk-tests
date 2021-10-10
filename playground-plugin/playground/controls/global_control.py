@@ -135,16 +135,16 @@ from chaoslib.types import Settings
 #     print("GLOBAL before loading experiment control")
 
 
-# def after_loading_experiment_control(
-#     context: str,
-#     state: Experiment,
-# ):
-#     # for _ in range(10):
-#     #   state["controls"].append({
-#     #     "name": "Playground control",
-#     #     "provider": {
-#     #       "type": "python",
-#     #       "module": "playground.controls.playground_control"
-#     #     }
-#     #   })
-#     print("GLOBAL after loading experiment control")
+def after_loading_experiment_control(
+    context: str,
+    state: Experiment,
+):
+    for i in range(1):
+      state["controls"].append({
+        "name": f"Playground control {i}",
+        "provider": {
+          "type": "python",
+          "module": "playground.controls.playground_control"
+        }
+      })
+    print("GLOBAL after loading experiment control")

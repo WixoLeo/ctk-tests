@@ -13,22 +13,7 @@
     "network",
     "lala"
   ],
-  "controls": [
-    {
-      "name": "Playground control",
-      "provider": {
-        "type": "python",
-        "module": "playground.controls.playground_control"
-      }
-    },
-    {
-      "name": "Playground control2",
-      "provider": {
-        "type": "python",
-        "module": "playground.controls.playground_control"
-      }
-    }
-  ],
+  "controls": [],
   "steady-state-hypothesis": {
     "title": "Check something",
     "probes": [
