@@ -4,7 +4,8 @@
   "description": "test",
   "configuration": {
     "myarg": "exp.json",
-    "another_arg": "another.json"
+    "another_arg": "another.json",
+    "extraconfig": ""
   },
   "variables": {
     "selected_instance": null
@@ -24,7 +25,10 @@
         "provider": {
           "type": "python",
           "module": "playground.play.probes",
-          "func": "some_probe"
+          "func": "some_probe",
+          "arguments": {
+            "toprint": "${extraconfig}"
+          }
         },
         "tolerance": true
       }
