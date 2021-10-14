@@ -1,5 +1,15 @@
 # Setup:
 
+* Clone and enter the repository:
+```bash
+git clone git@github.com:WixoLeo/ctk-tests.git && cd ctk-tests
+```
+
+* Checkout this branch:
+```bash
+git checkout activity-result
+```
+
 * Create python environment:
 ```bash
 virtualenv venv
