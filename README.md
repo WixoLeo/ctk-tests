@@ -30,7 +30,7 @@ pip install -r requirements.txt
 pip install -e ./playground-plugin
 ```
 
-* Run the experiment with settings.yaml:
+* Run the experiment:
 ```bash
 chaos run exp.json
 ```
