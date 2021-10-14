@@ -2,19 +2,20 @@
   "version": "1.0.0",
   "title": "test",
   "description": "test",
-  "configuration": {
-    "myarg": "exp.json",
-    "another_arg": "another.json",
-    "extraconfig": ""
-  },
-  "variables": {
-    "selected_instance": null
-  },
+  "configuration": {},
   "tags": [
     "network",
     "lala"
   ],
-  "controls": [],
+  "controls": [
+    {
+      "name": "Playground control",
+      "provider": {
+        "type": "python",
+        "module": "playground.controls.playground_control"
+      }
+    }
+  ],
   "steady-state-hypothesis": {
     "title": "Check something",
     "probes": [
@@ -25,37 +26,12 @@
         "provider": {
           "type": "python",
           "module": "playground.play.probes",
-          "func": "some_probe",
-          "arguments": {
-            "toprint": "${extraconfig}"
-          }
+          "func": "some_probe"
         },
-        "tolerance": true
+        "tolerance": false
       }
     ]
   },
-  "method": [
-    {
-      "name": "test action 1",
-      "description": "playground action 1",
-      "type": "action",
-      "provider": {
-        "type": "python",
-        "module": "playground.play.actions",
-        "func": "some_action"
-      }
-    }
-  ],
-  "rollbacks": [
-    {
-      "name": "rollback",
-      "description": "rolling it back",
-      "type": "action",
-      "provider": {
-        "type": "python",
-        "module": "playground.play.actions",
-        "func": "some_action"
-      }
-    }
-  ]
+  "method": [],
+  "rollbacks": []
 }

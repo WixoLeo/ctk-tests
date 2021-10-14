@@ -22,5 +22,5 @@ pip install -e ./playground-plugin
 
 * Run the experiment with settings.yaml:
 ```bash
-chaos --settings=settings.yaml run exp.json
+chaos run exp.json
 ```

@@ -1,4 +1,5 @@
-def some_probe(toprint):
+def some_probe(toprint=None):
     print("some probe")
-    print(toprint)
+    if toprint:
+        print(toprint)
     return True
